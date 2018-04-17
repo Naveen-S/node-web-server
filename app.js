@@ -58,6 +58,11 @@ app.get('/dummy', (req, res) => {
 	res.render('dummy' , {title: 'Dummy Page', welcomeMessage: 'Dummy dummy dummy!'});
 });
 
+app.get('/projects', (req, res) => {
+	// No need to specify .hbs extension since we have told express that our view-engine is hbs
+	res.render('projects' , {title: 'Projects Page', welcomeMessage: "Here's a still of my Projects!"});
+});
+
 app.get('/bad', (req, res) => {
 	// content-type is automatically set to application/json if object is passed to res.send.
 	res.send({
